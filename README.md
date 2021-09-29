@@ -32,7 +32,10 @@ Usage : ```python kush-util.py create [opt-args]```
 | --pname		|opt-args| Specify Projects Name|
 | --pname		|opt-args| Specify Projects Path|
 
-  
+## Running
+1. Create a virtualenv
+2. Get the required packages through pip from requirements.txt
+3. Run the ```kush-util.py``` script with the required args.
 
 ## Requirements
 
