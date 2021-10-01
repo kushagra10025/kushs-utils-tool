@@ -98,6 +98,8 @@ Usage : ```python kush-util.py hackto random [opt-args]```
 	* for the webpage from requests scrap required ids and classes
 * [smtplib](https://docs.python.org/3/library/smtplib.html) - ```Approach for smtplib usage:```
 	* sending emails - currently gmail only using smtp
+* [cowsay](https://pypi.org/project/cowsay/) - ```Approach for cowsay usage```
+	* for adding fun element in printing on CLI screen.
 
 ## Contributing
 > **NOTE:** Check the TODO before opening issues to check if it is detected and is being worked upon.

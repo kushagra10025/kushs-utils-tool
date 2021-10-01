@@ -14,6 +14,7 @@
 * Allow for ability to customize default through a json file ```globals.py```
 * Define Parser Groups ```cli_args_parser.py```
 * Determine a way to find if the Project has been created by the Util Program
+* Add Colored Print to Stuff!!
 
 ## Resources
 * Argparse Nester Parser - https://www.youtube.com/watch?v=3tSq5Yo2e2o&ab_channel=CodingWisdom
