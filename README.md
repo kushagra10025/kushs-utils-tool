@@ -18,6 +18,7 @@
 > ```kush-util.py``` is the entry point. Other files are helpers.
 
 ***First Level Arguments***
+
 Usage : ```python kush-util.py <command> [opt-args]```
 | CLI Arguments |  Type  | Description|
 | ------------- | :----: |-------------:|
@@ -29,6 +30,7 @@ Usage : ```python kush-util.py <command> [opt-args]```
 | hackto		|pos-args| Utility scripts by community during Hacktober|
 
 ***For Creating a Project - Second Level Arguments***
+
 Usage : ```python kush-util.py create [opt-args]```
 
 | CLI Arguments |  Type  | Description|
@@ -39,6 +41,7 @@ Usage : ```python kush-util.py create [opt-args]```
 | --pname		|opt-args| Specify Projects Path|
 
 ***For Accessing Hacktober Contributions - Second Level Arguments***
+
 Usage : ```python kush-util.py hackto <hackto_command> [opt-args]```
 
 | CLI Arguments |  Type  | Description|
@@ -48,6 +51,7 @@ Usage : ```python kush-util.py hackto <hackto_command> [opt-args]```
 | price_alert	|pos-args| Get Price alert for Amazon.in products|
 
 ***For Accessing Price Alert Scripts - Third Level Arguments***
+
 Usage : ```python kush-util.py hackto price_alert <command> [opt-args]```
 
 | CLI Arguments |  Type  | Description|
@@ -60,6 +64,7 @@ Usage : ```python kush-util.py hackto price_alert <command> [opt-args]```
 | --r_email		|opt-args| Receiver Email (set default in globals)|
 
 ***For Accessing Random Generators Scripts - Third Level Arguments***
+
 Usage : ```python kush-util.py hackto random [opt-args]```
 
 | CLI Arguments |  Type  | Description|
