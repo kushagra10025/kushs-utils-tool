@@ -6,7 +6,7 @@ class CliArgsParser:
 		self.parser = argparse.ArgumentParser(description="Kushagra\'s Utils Program!")
 		self.subparser = self.parser.add_subparsers(dest="command",description="Available Commands")
 		
-		self.parser.add_argument('-v','--version',action='version',version="%(prog)s 0.0.1")
+		self.parser.add_argument('-v','--version',action='version',version="%(prog)s 0.0.2")
 
 		pass
 
@@ -21,6 +21,7 @@ class CliArgsParser:
 		self.create_parser = self.subparser.add_parser("create",help="Create Project from Templates")
 		self.modify_parser = self.subparser.add_parser("modify",help="Modify Project Templates Metadata")
 		self.delete_parser = self.subparser.add_parser("delete",help="Delete Exisiting Projects")
+		self.hackto_parser = self.subparser.add_parser("hackto",help="Utility scripts by community during Hacktober")
 		pass
 
 	def all_init(self):
@@ -87,9 +88,47 @@ class CliArgsParser:
 		# TODO Add Delete Parser Positional Arguments
 		pass
 
+	def hackto_parser_args(self):	
+		self.sub_hackto_parser = self.hackto_parser.add_subparsers(dest="hackto_command",description="Community scripts from hacktobers")
+
+		# START RANDOM CHANCES SECTION
+		self.hackto_random_parser = self.sub_hackto_parser.add_parser("random",help="Random Chances Things!")
+		self.hackto_random_parser.add_argument("--roll_dice",action='store_const',const='ROLL_DICE',help="Roll A Double Dice!")
+		self.hackto_random_parser.add_argument("--toss_coin",action='store_const',const='FLIP_COIN',help="Toss A Coin!")
+		# END RANDOM CHANCES SECTION
+		
+		# START PRICE_ALERT SECTION
+		self.hackto_price_alert_parser = self.sub_hackto_parser.add_parser("price_alert",help="Get Price alert for Amazon.in products")
+		self.hackto_price_alert_parser.add_argument(
+			'url',
+			help='Enter the Amazon.in URL for the product'
+		)
+		self.hackto_price_alert_parser.add_argument(
+			'eprice',
+			help='Enter the Expected price in INR for the product'
+		)
+		self.hackto_price_alert_parser.add_argument(
+			'--s_email',
+			default=glbs.default_sender_email,
+			help='Sender Email'
+		)
+		self.hackto_price_alert_parser.add_argument(
+			'--s_pass',
+			default=glbs.deafult_sender_password,
+			help='Sender Password'
+		)
+		self.hackto_price_alert_parser.add_argument(
+			'--r_email',
+			default=glbs.default_receiver_email,
+			help='Receiver Email'
+		)
+		# END PRICE ALERT SECTION
+
+		pass
+
 	def final_parse_args(self):
 		# args = vars(parser.parse_args()) - Returns Dict
 		self.args = self.parser.parse_args()
 
-		print(self.args)
+		# print(self.args)
 		return self.args
