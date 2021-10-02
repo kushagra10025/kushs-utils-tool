@@ -6,7 +6,7 @@ class CliArgsParser:
 		self.parser = argparse.ArgumentParser(description="Kushagra\'s Utils Program!")
 		self.subparser = self.parser.add_subparsers(dest="command",description="Available Commands")
 		
-		self.parser.add_argument('-v','--version',action='version',version="%(prog)s 0.0.2")
+		self.parser.add_argument('-v', '--version', action='version', version="%(prog)s 0.0.2")
 
 		pass
 
@@ -95,6 +95,7 @@ class CliArgsParser:
 		self.hackto_random_parser = self.sub_hackto_parser.add_parser("random",help="Random Chances Things!")
 		self.hackto_random_parser.add_argument("--roll_dice",action='store_const',const='ROLL_DICE',help="Roll A Double Dice!")
 		self.hackto_random_parser.add_argument("--toss_coin",action='store_const',const='FLIP_COIN',help="Toss A Coin!")
+		self.hackto_random_parser.add_argument("--sort_hat", action='store_const', const='SORT_HAT', help="Get sorted at Hogwartz!")
 		# END RANDOM CHANCES SECTION
 		
 		# START PRICE_ALERT SECTION
