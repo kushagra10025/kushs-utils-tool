@@ -72,6 +72,7 @@ Usage : ```python kush-util.py hackto random [opt-args]```
 | -h, --help    |opt-args| Show help for create | 
 | --roll_dice	|opt-args| Roll a Double Dice!|
 | --toss_coin	|opt-args| Toss a Coin!|
+| --sort_hat	|opt-args| Get sorted at Hogwartz!|
 
 ## Running
 1. Create a virtualenv
